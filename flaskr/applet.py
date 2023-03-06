@@ -34,7 +34,7 @@ def index():
         else:
             input_ = int(input_)
             
-            output = 3*input_#sgx.csgx_mult3(input_)
+            output = sgx.csgx_mult3(input_)
         
             return render_template('applet/index.html', output=output)
     return render_template('applet/index.html', output=None)
