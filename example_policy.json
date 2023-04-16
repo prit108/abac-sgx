@@ -1,0 +1,44 @@
+[
+    {
+        "name": "r1",
+        "ua": { "designation": "professor", "department": "cse" },
+        "oa": { "type": "journal", "confidentiality": "high" },
+        "ea": { "day": "weekday" },
+        "op": "write"
+    },
+    {
+        "name": "r2",
+        "ua": { "designation": "professor", "department": "cse" },
+        "oa": { "type": "textbook", "confidentiality": "high" },
+        "ea": { "day": "weekday" },
+        "op": "write"
+    },
+    {
+        "name": "r3",
+        "ua": { "designation": "student", "department": "cse" },
+        "oa": { "type": "journal", "confidentiality": "high" },
+        "ea": { "day": "weekend" },
+        "op": "read"
+    },
+    {
+        "name": "r4",
+        "ua": { "designation": "professor", "department": "ece" },
+        "oa": { "type": "journal", "confidentiality": "low" },
+        "ea": { "day": "weekend" },
+        "op": "write"
+    },
+    {
+        "name": "r5",
+        "ua": { "designation": "professor", "department": "ece" },
+        "oa": { "type": "textbook", "confidentiality": "low" },
+        "ea": { "day": "weekday" },
+        "op": "write"
+    },
+    {
+        "name": "r6",
+        "ua": { "designation": "student", "department": "ece" },
+        "oa": { "type": "journal", "confidentiality": "low" },
+        "ea": { "day": "weekend" },
+        "op": "read"
+    }
+]
