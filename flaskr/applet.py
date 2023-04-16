@@ -5,7 +5,6 @@ from werkzeug.exceptions import abort
 
 from flaskr.auth import login_required
 from flaskr.db import get_db
-import sgx_call as sgx
 
 bp = Blueprint('applet', __name__)
 
@@ -42,7 +41,7 @@ def index():
         else:
             input_ = int(input_)
             
-            output = 3*input_#sgx.csgx_mult3(input_)
+            output = sgx.csgx_mult3(input_)
         
             return render_template('applet/index.html', output=output)
     return render_template('applet/index.html', output=None)
