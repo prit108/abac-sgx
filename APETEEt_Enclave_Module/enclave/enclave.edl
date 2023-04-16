@@ -1,0 +1,31 @@
+enclave {
+
+    // includes
+    include "wrapper.h"
+
+
+    // define ECALLs
+    trusted {
+
+        public int ecall_make_policy(
+            [in, out]   ABAC_TREE_NODE* root,
+            [in]        RULE_WRAPPER* rules
+        );
+
+        public int ecall_evaluate_aux(
+            [out]   int* result,
+            [in]    ABAC_TREE_NODE* root,
+            [in]    ATTRIB_DICT_WRAPPER* ua,
+            [in]    ATTRIB_DICT_WRAPPER* oa,
+            [in]    int weekday, // only one environment attirbute is shown others a can be similarly implemented.
+            [in]    int opcode
+        );
+
+    };
+
+
+    // define OCALLs
+    untrusted {
+    
+    };
+};

@@ -24,6 +24,14 @@ bp = Blueprint('applet', __name__)
 @login_required
 def index():
     if request.method == "POST":
+        print(request.remote_addr)
+        print(request.host)
+        print(request.server)
+        print(request.root_url)
+        if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+            print(request.environ['REMOTE_ADDR'])
+        else:
+            print(request.environ['HTTP_X_FORWARDED_FOR']) # if behind a proxy
         input_ = request.form['input']
         error = None
         if not input_:
