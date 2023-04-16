@@ -1,0 +1,14 @@
+@$#SAPE_POLICY_CONFIG_TYPE
+2
+designation,professor,student
+department,cse,ece
+###
+2
+type,journal,textbook
+confidentiality,high,low
+###
+1
+day,weekend,weekday
+###
+2
+read,write

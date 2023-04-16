@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Posts{% endblock %}</h1>
+  <h1>{% block title %}RequestWindow{% endblock %}</h1>
   {% if g.user %}
     <a class="action" href="{{ url_for('applet.index') }}">New</a>
   {% endif %}
 {% endblock %}
 
 {% block content %}
-  {% for post in posts %}
+  <!-- {% for post in posts %}
     <article class="post">
       <header>
         <div>
@@ -24,5 +24,14 @@
     {% if not loop.last %}
       <hr>
     {% endif %}
-  {% endfor %}
+  {% endfor %} -->
+  <h1>Requests</h1>
+  <form method="post">
+    <label for="input">Enter a number:</label>
+    <input type="number" name="input" id="input" value="{{ request.form['input'] }}" required>
+    <input type="submit" value="Send">
+  </form>
+  {% if output is not none %}
+  <p class="body">The result returned is : {{ output }}</p>
+  {% endif %}
 {% endblock %}
